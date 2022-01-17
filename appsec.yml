@@ -1,5 +1,22 @@
 version: 0.0
-os: windows
+os: Windows
 files:
-  - source: "c:\\Users\\eiihnss\\PycharmProjects\\pythonProject2\\Vanilla\\index2.html"
-    destination: "http://localhost:8080"
+  - source: /index2.html
+    destination: /var/www/html/
+hooks:
+  BeforeInstall:
+    - location: js-cloudimage-360-view.min.js
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: launch.json
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: index2.html
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: index2.html
+      timeout: 300
+      runas: root

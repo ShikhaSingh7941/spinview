@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Vanilla JS </title>
+</head>
+
+<body>
+    <div style="width:400px; margin: 100px auto">
+        <div
+            class="cloudimage-360"
+            data-folder="images/"
+            data-filename="product-{index}.png"
+            data-amount="2"
+            data keys="true"
+            data-autoplay="true">
+        </div>
+        
+    </div>
+    <script src="js-cloudimage-360-view.min.js"></script>
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0
+    }
+    
+    h3 {
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+    
+    body {
+        background: #192520;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    body:after {
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 30%;
+        background: #353ebb;
+        width: 40%;
+        height: 100%;
+        z-index: -1;
+        transform: skew(-20deg)
+    }
+    
+    .custom-file-container {
+        max-width: 70%;
+        margin: 100px auto;
+    }
+</style>
+</head>
+
+<body>
+
+
+
+<div class="custom-file-container" data-upload-id="myUniqueUploadId">
+    <h3>360 Spin View </h3>
+    <div id="mercedes-360-view" 
+    class="cloudimage-360" 
+    data-folder="https://scaleflex.ultrafast.io/https://scaleflex.airstore.io/filerobot/js-cloudimage-360-view/full_screen.svg" 
+    data-filename="iris-{index}.jpeg"></div>
+</div>
+
+<script>
+    window.CI360.init();
+</script>
+</body>
+
+</html>
+</html>
